@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad - JVA Entertainment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ======== Chat simulado ======== */
+        .chat-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        .chat-container h2 {
+            color: #00adee;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .chat-box {
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            min-height: 150px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+        }
+
+        .chat-box p {
+            margin: 5px 0;
+        }
+
+        .chat-box .placeholder {
+            font-size: 1.2rem;
+            color: #ccc;
+            text-align: center;
+        }
+
+        .chat-input {
+            display: flex;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+            outline: none;
+        }
+
+        .chat-input button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #00adee;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .chat-input button:hover {
+            background-color: #0090c8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🎮 JVA Entertainment</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="biblioteca.html">Biblioteca</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="comunidad.html" class="activo">Comunidad</a>
+            <a href="ayuda.html">Ayuda</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar juegos...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="content comunidad">
+            <div class="chat-container">
+                <h2>Comunidad</h2>
+                <div class="chat-box" id="chatBox">
+                    <p class="placeholder">Nadie ha comentado hasta ahora. ¡Inicia la conversación!</p>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+                    <button onclick="enviarMensaje()">Enviar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 JVA Entertainment | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        const chatBox = document.getElementById('chatBox');
+        const chatInput = document.getElementById('chatInput');
+
+        function enviarMensaje() {
+            const texto = chatInput.value.trim();
+            if (texto === "") return;
+
+            // Si está el placeholder, se elimina
+            const placeholder = chatBox.querySelector('.placeholder');
+            if (placeholder) {
+                placeholder.remove();
+            }
+
+            const mensaje = document.createElement('p');
+            mensaje.textContent = `usuario00: ${texto}`;
+            chatBox.appendChild(mensaje);
+
+            // Limpiar input y hacer scroll hacia abajo
+            chatInput.value = "";
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        // Permitir enviar con Enter
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                enviarMensaje();
+            }
+        });
+    </script>
+</body>
+</html>
