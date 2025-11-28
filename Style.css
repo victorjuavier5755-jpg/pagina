@@ -1,0 +1,301 @@
+/* ======== Estilos generales ======== */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* ======== Header ======== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00adee;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #00adee;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #00adee;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.search-container button:hover {
+    background-color: #0090c8;
+}
+
+/* ======== Hero ======== */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom right, #00adee, #1e1e1e);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #00adee;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero-btn:hover {
+    background-color: #0090c8;
+}
+
+/* ======== Noticias ======== */
+.news {
+    padding: 40px 20px;
+    background-color: #181818;
+}
+
+.news h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00adee;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.news-grid article {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.news-grid article:hover {
+    transform: scale(1.03);
+}
+
+.news-grid h3 {
+    margin-top: 0;
+    color: #00adee;
+}
+
+/* ======== Comunidad ======== */
+.community {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+}
+
+.community h2 {
+    color: #00adee;
+    margin-bottom: 15px;
+}
+
+.community-btn {
+    padding: 10px 20px;
+    background-color: #00adee;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.community-btn:hover {
+    background-color: #0090c8;
+}
+
+/* ======== Footer ======== */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+/* … aquí está todo lo que ya tenías antes … */
+
+/* ======== Tienda ======== */
+.tienda {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.tienda h1 {
+    font-size: 2rem;
+    color: #00adee;
+    margin-bottom: 10px;
+}
+
+.tienda p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+/* ======== Biblioteca ======== */
+.content {
+    text-align: center;  /* Centra todo el contenido dentro de la sección */
+    padding: 80px 20px;  /* Espaciado arriba y abajo */
+}
+
+.content h2 {
+    font-size: 2rem;
+    color: #00adee;      /* Azul similar al tema principal */
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.content a {
+    color: #00adee;      /* Azul para el enlace */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+    color: #007bb5;      /* Azul más oscuro al pasar el mouse */
+}
+
+/* ======== Noticias ======== */
+.noticias {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.noticias h2 {
+    font-size: 2rem;
+    color: #00adee;
+    margin-bottom: 30px;
+}
+
+.noticia {
+    background-color: #222;
+    color: #fff;
+    margin: 15px auto;
+    padding: 15px 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    transition: transform 0.2s;
+}
+
+.noticia:hover {
+    transform: scale(1.03);
+}
+
+.noticia h3 {
+    margin: 0 0 10px 0;
+    color: #00adee;
+}
+
+.noticia p {
+    margin: 0;
+    color: #ccc;
+}
+
+/* ======== Chat simulado (corregido) ======== */
+.chat-box {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    height: 300px;         /* Altura fija */
+    overflow-y: auto;      /* Scroll interno si hay muchos mensajes */
+    margin-bottom: 15px;
+}
+
+/* ======== Ayuda ======== */
+.ayuda {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.help-box {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+/* ---- ACERCA DE ---- */
+.about-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.about-card h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-card p {
+    line-height: 1.6rem;
+    color: #555;
+}
