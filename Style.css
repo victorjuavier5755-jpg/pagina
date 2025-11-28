@@ -268,65 +268,41 @@ footer {
     font-size: 1.2rem;
 }
 
-/* ---- ACERCA DE ---- */
+/* ======== ACERCA DE ======== */
 .about-container {
+    width: 90%;
     max-width: 900px;
-    margin: 40px auto;
+    margin: 100px auto 50px;
     padding: 20px;
     text-align: center;
 }
 
 .about-container h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-bottom: 30px;
+    color: #ffffff;
 }
 
 .about-card {
-    background: #ffffff;
+    background: #1a1a1a;
+    border: 1px solid #333;
     padding: 25px;
     margin-bottom: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
     text-align: left;
 }
 
 .about-card h2 {
+    font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #ff4b4b;
 }
 
 .about-card p {
-    line-height: 1.6rem;
-    color: #555;
-}
-
-/* ----- Estilo para la página Acerca de ----- */
-
-.acerca-container {
-    max-width: 900px;
-    margin: 120px auto 40px;
-    padding: 20px;
-    background: #ffffff10;
-    backdrop-filter: blur(6px);
-    border-radius: 12px;
-    box-shadow: 0 0 10px #00000030;
-    color: white;
-}
-
-.acerca-container h1 {
-    text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 30px;
-}
-
-.acerca-container h2 {
-    margin-top: 30px;
-    font-size: 1.8rem;
-    color: #4da3ff;
-}
-
-.acerca-container p {
-    margin-top: 10px;
     font-size: 1.1rem;
     line-height: 1.6;
+    color: #dddddd;
 }
+
+
